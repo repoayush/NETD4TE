@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About NETD4TE - Your Ai Digital Wingman</title>
+    <link rel="icon" href="https://placehold.co/32x32/FF69B4/FFFFFF?text=ND" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Dark Mode Configuration
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#FF69B4', // Hot Pink
+                        'primary-dark': '#C71585', // Medium Violet Red
+                        'primary-light': '#FFB6C1', // Light Pink
+                        'dark-bg': '#000000',
+                        'dark-card': '#1a1a1a',
+                        'dark-text': '#e0e0e0',
+                        'dark-subtext': '#a0a0a0',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-dark-bg text-gray-800 dark:text-dark-text transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="bg-white/80 dark:bg-dark-bg/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-primary dark:text-primary-light">NETD4TE</a>
+            
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="communityguidlines.html" class="nav-link">Community</a>
+                <a href="privacypolicy.html" class="nav-link">Privacy</a>
+                <a href="termsandcondition.html" class="nav-link">Terms</a>
+                <a href="contactus.html" class="nav-link">Contact</a>
+                <button id="download-button" class="bg-primary hover:bg-primary-dark text-white font-bold py-2 px-4 rounded-full transition-transform transform hover:scale-105">Download</button>
+                <button id="darkModeToggleDesktop" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-dark-card">
+                    <svg id="theme-icon-desktop" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"></svg>
+                </button>
+            </div>
+
+            <!-- Mobile Burger Menu -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 dark:text-dark-text focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h4"></path></svg>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-white dark:bg-dark-card shadow-lg transform translate-x-full md:hidden">
+            <div class="p-4 flex flex-col h-full">
+                <button id="close-menu-button" class="self-end text-2xl mb-4">&times;</button>
+                 <a href="index.html" class="nav-link-mobile">Home</a>
+                 <a href="about.html" class="nav-link-mobile active-mobile">About</a>
+                 <a href="communityguidlines.html" class="nav-link-mobile">Community</a>
+                 <a href="privacypolicy.html" class="nav-link-mobile">Privacy Policy</a>
+                 <a href="termsandcondition.html" class="nav-link-mobile">Terms & Conditions</a>
+                 <a href="contactus.html" class="nav-link-mobile">Contact Us</a>
+                <div class="mt-auto">
+                     <button id="darkModeToggleMobile" class="w-full flex items-center justify-between p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">
+                        <span>Dark Mode</span>
+                        <div class="w-12 h-6 bg-gray-300 dark:bg-gray-600 rounded-full p-1 flex items-center transition-colors">
+                            <div id="theme-toggle-dot" class="w-4 h-4 bg-white rounded-full transform transition-transform"></div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container mx-auto px-6 py-16">
+        <div class="prose dark:prose-invert max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold mb-8 text-center">About <span class="text-primary">NETD4TE</span></h1>
+            
+            <p class="text-xl leading-relaxed text-center text-gray-600 dark:text-dark-subtext mb-12">
+                In a world full of dating apps, NETD4TE stands out by focusing on what matters most: making genuine connections easier and more comfortable for everyone, especially for those who find the first step the hardest.
+            </p>
+
+            <div class="bg-gray-50 dark:bg-dark-card p-8 rounded-xl shadow-md my-12">
+                <h2 class="text-3xl font-bold mb-4">Our Mission: Your <span class="text-primary">Ai Digital Wingman</span></h2>
+                <p class="text-lg mb-4">
+                    Our slogan is more than just a tagline; it's the core of our mission. We aim to be the go-to dating app for introverts, gynophobics, and anyone who feels a bit of anxiety or nervousness when it comes to starting a conversation. We believe that everyone deserves a chance to find a meaningful connection, and a little help from a smart AI can make all the difference.
+                </p>
+            </div>
+
+            <h2 class="text-3xl font-bold mt-16 mb-6">What Makes Us Different?</h2>
+            <ul class="space-y-6 text-lg">
+                <li class="flex items-start gap-4">
+                    <span class="text-primary text-2xl mt-1">🤖</span>
+                    <div>
+                        <h3 class="font-semibold">The Introvert Request</h3>
+                        <p class="text-gray-600 dark:text-dark-subtext">This is our signature feature. Instead of a simple "like," you can send an "Introvert Request." If the other person accepts, our Wingman AI steps in to help craft a great icebreaker, getting the conversation started for you.</p>
+                    </div>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="text-primary text-2xl mt-1">👤</span>
+                    <div>
+                        <h3 class="font-semibold">A Focus on Personality</h3>
+                        <p class="text-gray-600 dark:text-dark-subtext">While photos are important, we encourage users to express themselves through detailed bios. Relationship goals, interests, and personality are what truly build connections.</p>
+                    </div>
+                </li>
+                 <li class="flex items-start gap-4">
+                    <span class="text-primary text-2xl mt-1">🔒</span>
+                    <div>
+                        <h3 class="font-semibold">Privacy-First "Nearby" Feature</h3>
+                        <p class="text-gray-600 dark:text-dark-subtext">Forget GPS tracking. Our unique "Nearby" feature lets you connect with people at the same event or location using shared keywords, giving you full control over your privacy.</p>
+                    </div>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="text-primary text-2xl mt-1">💎</span>
+                    <div>
+                        <h3 class="font-semibold">A Rewarding Experience</h3>
+                        <p class="text-gray-600 dark:text-dark-subtext">Earn virtual currency (Gold and Diamonds) by engaging with the app. Use this currency to access premium features like the Introvert Request, making our best tools accessible to all users.</p>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="text-center mt-16">
+                 <h2 class="text-3xl font-bold mb-4">Who We're For</h2>
+                 <p class="text-lg max-w-2xl mx-auto text-gray-600 dark:text-dark-subtext">
+                    NETD4TE is an inclusive platform for all adults (18+) of any gender, orientation, or relationship goal—be it casual dating, a serious relationship, or marriage. Our primary focus is on creating a safe and welcoming environment for those who might feel overlooked on other platforms.
+                 </p>
+                 <p class="text-lg mt-6 font-semibold">Join NETD4TE today and let your Ai Digital Wingman help you make your next great connection!</p>
+            </div>
+
+        </div>
+    </main>
+    
+    <footer class="bg-gray-100 dark:bg-dark-card mt-20">
+        <div class="container mx-auto px-6 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-primary dark:text-primary-light">NETD4TE</h3>
+                    <p class="text-gray-600 dark:text-dark-subtext">Your Ai Digital Wingman for better connections.<br>&copy; 2025 NETD4TE. All Rights Reserved.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Follow Us</h3>
+                    <div class="space-y-2">
+                        <a href="#" class="flex items-center justify-center md:justify-start gap-2 footer-link">
+                           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.39.106-.803.163-1.227.163-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"></path></svg>
+                           <span>@netd4te_app</span>
+                        </a>
+                        <a href="#" class="flex items-center justify-center md:justify-start gap-2 footer-link">
+                           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266.058 1.644.07 4.85.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"></path></svg>
+                           <span>@netd4te</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Contact Us</h3>
+                     <div class="space-y-2">
+                        <p class="flex items-center justify-center md:justify-start gap-2 text-gray-600 dark:text-dark-subtext">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <span>support@netd4te.com</span>
+                        </p>
+                         <p class="flex items-center justify-center md:justify-start gap-2 text-gray-600 dark:text-dark-subtext">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>press@netd4te.com</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Download Modal -->
+    <div id="download-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center">
+        <div class="bg-white dark:bg-dark-card rounded-lg shadow-xl p-8 max-w-sm w-full relative transform transition-all opacity-0 scale-95">
+            <button id="close-modal-button" class="absolute top-2 right-2 text-2xl text-gray-500 hover:text-gray-800 dark:hover:text-dark-text">&times;</button>
+            <h2 class="text-2xl font-bold text-center mb-6">Download NETD4TE</h2>
+            <div class="space-y-4">
+                <a href="#" class="flex items-center gap-4 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                    <img src="https://placehold.co/40x40/4CAF50/FFFFFF?text=P" alt="Play Store" class="w-10 h-10">
+                    <div>
+                        <p class="font-semibold">Get it on</p>
+                        <p class="text-lg font-bold">Google Play</p>
+                    </div>
+                </a>
+                <div class="flex items-center gap-4 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg cursor-not-allowed opacity-60">
+                    <img src="https://placehold.co/40x40/000000/FFFFFF?text=A" alt="App Store" class="w-10 h-10">
+                    <div>
+                        <p class="font-semibold">Coming soon on the</p>
+                        <p class="text-lg font-bold">App Store</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
+
