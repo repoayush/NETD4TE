@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insider Tips - NETD4TE</title>
+    <link rel="icon" href="https://placehold.co/32x32/FF69B4/FFFFFF?text=ND" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Dark Mode Configuration
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#FF69B4', // Hot Pink
+                        'primary-dark': '#C71585', // Medium Violet Red
+                        'primary-light': '#FFB6C1', // Light Pink
+                        'dark-bg': '#000000',
+                        'dark-card': '#1a1a1a',
+                        'dark-text': '#e0e0e0',
+                        'dark-subtext': '#a0a0a0',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-dark-bg text-gray-800 dark:text-dark-text transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="bg-white/80 dark:bg-dark-bg/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-primary dark:text-primary-light">NETD4TE</a>
+            
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="about.html" class="nav-link">About</a>
+                <a href="communityguidlines.html" class="nav-link">Community</a>
+                <a href="privacypolicy.html" class="nav-link">Privacy</a>
+                <a href="termsandcondition.html" class="nav-link">Terms</a>
+                <a href="contactus.html" class="nav-link">Contact</a>
+                <button id="download-button" class="bg-primary hover:bg-primary-dark text-white font-bold py-2 px-4 rounded-full transition-transform transform hover:scale-105">Download</button>
+                <button id="darkModeToggleDesktop" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-dark-card">
+                    <svg id="theme-icon-desktop" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"></svg>
+                </button>
+            </div>
+
+            <!-- Mobile Burger Menu -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 dark:text-dark-text focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h4"></path></svg>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-white dark:bg-dark-card shadow-lg transform translate-x-full md:hidden">
+            <div class="p-4 flex flex-col h-full">
+                <button id="close-menu-button" class="self-end text-2xl mb-4">&times;</button>
+                 <a href="index.html" class="nav-link-mobile">Home</a>
+                 <a href="about.html" class="nav-link-mobile">About</a>
+                 <a href="communityguidlines.html" class="nav-link-mobile">Community</a>
+                 <a href="privacypolicy.html" class="nav-link-mobile">Privacy Policy</a>
+                 <a href="termsandcondition.html" class="nav-link-mobile">Terms & Conditions</a>
+                 <a href="contactus.html" class="nav-link-mobile">Contact Us</a>
+                <div class="mt-auto">
+                     <button id="darkModeToggleMobile" class="w-full flex items-center justify-between p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">
+                         <span>Dark Mode</span>
+                         <div class="w-12 h-6 bg-gray-300 dark:bg-gray-600 rounded-full p-1 flex items-center transition-colors">
+                             <div id="theme-toggle-dot" class="w-4 h-4 bg-white rounded-full transform transition-transform"></div>
+                         </div>
+                     </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl font-bold text-primary mb-6 text-center">NETD4TE Insider Tips</h1>
+            <p class="mb-10 text-lg text-center text-gray-600 dark:text-dark-subtext">Want to get more requests and make better connections? Here’s how to create a profile that gets noticed for all the right reasons.</p>
+
+            <div class="space-y-10">
+                <section>
+                    <h2 class="text-2xl font-semibold mb-3 flex items-center gap-3">
+                        <span class="text-3xl">✅</span> The #1 Rule: Be Yourself
+                    </h2>
+                    <p class="text-gray-700 dark:text-dark-text">The best thing you can do on NETD4TE is be authentic. That starts with your photos. Upload clear, recent pictures of yourself. A friendly smile goes a long way! Show off your hobbies, your pets, or a favorite place you've visited. This helps people see the real you.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold mb-3 flex items-center gap-3">
+                        <span class="text-3xl">❌</span> What to Avoid in Your Photos
+                    </h2>
+                    <p class="text-gray-700 dark:text-dark-text mb-4">We want to keep our community safe and genuine. To do that, we have strict rules about photos. Please **do not** upload pictures that are:</p>
+                    <ul class="list-disc list-inside space-y-2 bg-red-500/10 dark:bg-red-900/20 p-4 rounded-lg">
+                        <li>AI-generated images that are not of you.</li>
+                        <li>Anime, cartoon, or fictional characters.</li>
+                        <li>Famous actors, musicians, or any other celebrity.</li>
+                        <li>Anything that isn't clearly you.</li>
+                    </ul>
+                    <p class="mt-4 text-gray-700 dark:text-dark-text">You can upload an AI-enhanced version of your own photo (like a cartoon version), but with one very important condition: **it must clearly look like you.**</p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold mb-3 flex items-center gap-3">
+                        <span class="text-3xl">⚖️</span> Why We're Serious About This
+                    </h2>
+                    <p class="text-gray-700 dark:text-dark-text">Using fake photos isn't just misleading—it can cause serious issues. If someone reports your profile as fake, here’s what happens:</p>
+                     <ul class="list-disc list-inside mt-2 space-y-2">
+                        <li>Our team will investigate the report.</li>
+                        <li>We may ask you to verify your identity by matching your face with your uploaded pictures.</li>
+                        <li>If we find that your photos are fake or misleading, your account could face a **temporary suspension** or even a **permanent ban**.</li>
+                        <li>In serious cases, we might even **block your email address**, preventing you from creating another account in the future.</li>
+                    </ul>
+                    <p class="mt-4 text-gray-700 dark:text-dark-text">This isn't to be strict for no reason; it's to protect everyone and ensure that when you match with someone, you're matching with a real person.</p>
+                </section>
+                
+                <section>
+                    <h2 class="text-2xl font-semibold mb-3 flex items-center gap-3">
+                        <span class="text-3xl">💡</span> Final Tips for Success
+                    </h2>
+                    <ul class="list-disc list-inside mt-2 space-y-2">
+                        <li><strong>Read the Community Guidelines:</strong> Knowing the rules is the best way to have a great time and stay safe.</li>
+                        <li><strong>Be Kind:</strong> Always be humble and polite to others. A little respect goes a long way in making a good first impression.</li>
+                        <li><strong>Fill Out Your Bio:</strong> Don't leave your bio empty! It's your chance to share your personality and what you're looking for.</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-dark-card mt-20">
+        <div class="container mx-auto px-6 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-primary dark:text-primary-light">NETD4TE</h3>
+                    <p class="text-gray-600 dark:text-dark-subtext">Your Ai Digital Wingman for better connections.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Follow Us</h3>
+                    <div class="space-y-2">
+                        <a href="#" class="flex items-center justify-center md:justify-start gap-2 footer-link">
+                           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.39.106-.803.163-1.227.163-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"></path></svg>
+                           <span>@netd4te_app</span>
+                        </a>
+                        <a href="#" class="flex items-center justify-center md:justify-start gap-2 footer-link">
+                           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266.058 1.644.07 4.85.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"></path></svg>
+                           <span>@netd4te</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Contact Us</h3>
+                     <div class="space-y-2">
+                         <p class="flex items-center justify-center md:justify-start gap-2 text-gray-600 dark:text-dark-subtext">
+                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                             <span>support@netd4te.com</span>
+                         </p>
+                          <p class="flex items-center justify-center md:justify-start gap-2 text-gray-600 dark:text-dark-subtext">
+                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                             <span>press@netd4te.com</span>
+                         </p>
+                     </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700 flex flex-col sm:flex-row justify-between items-center text-center">
+                <p class="text-sm text-gray-600 dark:text-dark-subtext">&copy; 2025 NETD4TE. All Rights Reserved.</p>
+                <div class="mt-4 sm:mt-0">
+                    <a href="intellectualproperty.html" class="text-sm text-gray-600 dark:text-dark-subtext hover:text-primary dark:hover:text-primary-light mx-2">Intellectual Property</a>
+                    <a href="monetizationandfeatures.html" class="text-sm text-gray-600 dark:text-dark-subtext hover:text-primary dark:hover:text-primary-light mx-2">Monetization & Features</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Download Modal -->
+    <div id="download-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center">
+        <div class="bg-white dark:bg-dark-card rounded-lg shadow-xl p-8 max-w-sm w-full relative transform transition-all opacity-0 scale-95">
+            <button id="close-modal-button" class="absolute top-2 right-2 text-2xl text-gray-500 hover:text-gray-800 dark:hover:text-dark-text">&times;</button>
+            <h2 class="text-2xl font-bold text-center mb-6">Download NETD4TE</h2>
+            <div class="space-y-4">
+                <a href="#" class="flex items-center gap-4 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                    <img src="https://placehold.co/40x40/4CAF50/FFFFFF?text=P" alt="Play Store" class="w-10 h-10">
+                    <div>
+                        <p class="font-semibold">Get it on</p>
+                        <p class="text-lg font-bold">Google Play</p>
+                    </div>
+                </a>
+                <div class="flex items-center gap-4 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg cursor-not-allowed opacity-60">
+                    <img src="https://placehold.co/40x40/000000/FFFFFF?text=A" alt="App Store" class="w-10 h-10">
+                    <div>
+                        <p class="font-semibold">Coming soon on the</p>
+                        <p class="text-lg font-bold">App Store</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
