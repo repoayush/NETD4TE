@@ -12,14 +12,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    
     <script>
         // Tailwind Dark Mode Configuration (copied from index.html)
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
                     colors: {
                         'primary': '#FF69B4', // Hot Pink
                         'primary-dark': '#C71585', // Medium Violet Red
@@ -33,8 +35,54 @@
             }
         }
     </script>
+    <style>
+        /* Custom styles from style.css for consistency */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .nav-link {
+            @apply text-gray-700 dark:text-dark-subtext font-medium text-base hover:text-primary dark:hover:text-primary-light transition-colors duration-200;
+        }
+
+        .nav-link-mobile {
+            @apply block w-full py-3 px-4 text-lg text-gray-800 dark:text-dark-text hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg;
+        }
+
+        /* Styling for the prose content for better readability */
+        .prose {
+            max-width: 100%; /* Override default prose max-width to use the card's max-width */
+        }
+        .prose h1 {
+            @apply text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white;
+        }
+        .prose h2 {
+            @apply text-2xl font-semibold mt-8 mb-3 text-gray-800 dark:text-dark-text;
+        }
+        .prose p, .prose li {
+            @apply text-base text-gray-700 dark:text-dark-subtext;
+        }
+        .prose p {
+            @apply leading-relaxed;
+        }
+        .prose ol, .prose ul {
+            @apply space-y-2;
+        }
+        .prose ol li {
+            @apply list-decimal list-outside ml-6;
+        }
+        .prose ul li {
+            @apply list-disc list-outside ml-6;
+        }
+        .prose a {
+            @apply text-primary dark:text-primary-light font-medium hover:underline;
+        }
+        .prose code {
+            @apply bg-gray-100 dark:bg-gray-700 rounded-md px-1.5 py-0.5 text-sm font-mono text-primary dark:text-primary-light;
+        }
+    </style>
 </head>
-<body class="bg-white dark:bg-dark-bg text-gray-800 dark:text-dark-text transition-colors duration-300">
+<body class="bg-gray-50 dark:bg-dark-bg text-gray-800 dark:text-dark-text transition-colors duration-300">
 
     <!-- Header (Copied from index.html for consistency) -->
     <header class="bg-white/80 dark:bg-dark-bg/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
@@ -50,6 +98,7 @@
                 <a href="contactus.html" class="nav-link">Contact</a>
                 <button id="download-button" class="bg-primary hover:bg-primary-dark text-white font-bold py-2 px-4 rounded-full transition-transform transform hover:scale-105">Download</button>
                 <button id="darkModeToggleDesktop" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-dark-card">
+                    <!-- Icon will be inserted by JS -->
                     <svg id="theme-icon-desktop" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"></svg>
                 </button>
             </div>
@@ -72,7 +121,7 @@
                  <a href="privacypolicy.html" class="nav-link-mobile">Privacy Policy</a>
                  <a href="termsandcondition.html" class="nav-link-mobile">Terms & Conditions</a>
                  <a href="contactus.html" class="nav-link-mobile">Contact Us</a>
-                 <!-- Add other relevant mobile links if needed -->
+                 
                  <div class="mt-auto">
                      <button id="darkModeToggleMobile" class="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 mb-2">
                          <span class="text-gray-700 dark:text-dark-subtext">Dark Mode</span>
@@ -89,39 +138,62 @@
     <main>
         <!-- Account Deletion Content Section -->
         <section class="container mx-auto px-6 py-12 md:py-20">
-            <div class="max-w-3xl mx-auto bg-white dark:bg-dark-card p-6 md:p-10 rounded-lg shadow-lg prose dark:prose-invert">
-                <h1>Account Deletion Instructions</h1>
+            <!-- Increased max-width for better readability on larger screens -->
+            <div class="max-w-4xl mx-auto bg-white dark:bg-dark-card p-6 md:p-10 rounded-lg shadow-lg prose dark:prose-invert">
+                <h1>Data & Account Deletion</h1>
 
-                <p>We value your privacy and make it straightforward to delete your NETD4TE account and associated data directly within the app. Please follow these steps:</p>
+                <p>We believe in giving you full control over your data. You can manage, update, or permanently delete your information at any time. This page explains how.</p>
+                <p>As required by the Google Play Store, this page provides instructions for managing and deleting your account data, both from within the app and if you no longer have the app installed.</p>
 
-                <h2>Steps to Delete Your Account:</h2>
-                <ol class="list-decimal pl-5 space-y-3">
-                    <li>Log in to the NETD4TE app using your unique username and password.</li>
-                    <li>Navigate to the **"My Profile"** screen. You can usually find this by tapping your profile picture icon located at the bottom right corner of the main screen's navigation bar.</li>
-                    <li>On your "My Profile" screen, look for the **menu icon** (often represented by three horizontal lines or dots ☰/⋮) in the top right corner. Tap this icon to open the side drawer menu.</li>
-                    <li>In the menu drawer that slides out, scroll down to the bottom.</li>
-                    <li>Tap on the **"Delete Account"** option.</li>
-                    <li>A confirmation dialog box will appear asking if you are sure you want to delete your account. Read the confirmation message carefully.</li>
-                    <li>To proceed with deletion, tap the **"Confirm"** button. If you change your mind, tap "Cancel".</li>
-                </ol>
-
-                <h2>What Happens When You Delete Your Account?</h2>
-                <p>Upon confirming the deletion:</p>
+                <!-- NEW SECTION -->
+                <h2>How You Can Manage Your Data</h2>
+                <p>You don't have to delete your entire account to manage your data. You have control over your profile information directly within the app:</p>
                 <ul>
-                    <li>Your account will be **immediately and permanently deleted**. There is no 30-day grace period.</li>
-                    <li>All your personal profile information, including your profile name, username, bio, date of birth, gender, country, and email address will be removed from our active databases.</li>
-                    <li>Your profile picture and all uploaded swipe photos will be permanently deleted.</li>
-                    <li>Your match history, request history (sent and received), and visitor history will be deleted.</li>
-                    <li>All your chat messages and conversations will be permanently deleted.</li>
-                    <li>Any remaining Gold or Diamond balances will be forfeited.</li>
-                    <li>Your connection to any active subscriptions through Google Play will need to be managed separately through your Google Play account settings.</li>
+                    <li><strong>Updating Your Information:</strong> When you edit your profile and provide new information (like a new profile name, bio, or email), the old information is permanently overwritten and deleted from our active database.</li>
+                    <li><strong>Updating Your Photos:</strong> When you upload a new profile picture or swipe photo, the old photo it replaces is permanently deleted.</li>
+                    <li><strong>Deleting Your Photos:</strong> You can delete any of your photos (including your main profile picture or swipe photos) at any time from the "Edit Profile" screen, even without replacing them.</li>
                 </ul>
 
-                <h2>Data Retention</h2>
-                <p>While your active user data is deleted immediately upon request, please note that we may retain certain anonymized or aggregated data for analytical purposes to improve our services. Additionally, records related to financial transactions (like subscription purchases) may be kept for a period required by law for auditing and compliance purposes. For more details, please refer to our <a href="privacypolicy.html">Privacy Policy</a>.</p>
+                <h2>How to Delete Your Account (From Inside the App)</h2>
+                <p>The easiest and fastest way to permanently delete your account is directly through the app:</p>
+                <ol>
+                    <li>Log in to the NETD4TE app using your unique username and password.</li>
+                    <li>Navigate to the <strong>"My Profile"</strong> screen (usually the icon at the bottom-right of the navigation bar).</li>
+                    <li>On your profile screen, tap the <strong>menu icon</strong> (☰ or ⋮) in the top-right corner to open the side menu.</li>
+                    <li>In the menu, scroll down and tap on the <strong>"Delete Account"</strong> option.</li>
+                    <li>A confirmation pop-up will appear. To finalize, tap the <strong>"Confirm"</strong> button.</li>
+                </ol>
 
-                <h2>Need Help?</h2>
-                <p>If you encounter any issues deleting your account through the app, please contact our support team at <a href="mailto:support@netd4te.com">support@netd4te.com</a> for assistance.</p>
+                <!-- UPDATED SECTION -->
+                <h2>What Happens When You Delete Your Account?</h2>
+                <p>When you confirm account deletion, the process is **immediate and irreversible.**</p>
+                <ul>
+                    <li><strong>Permanent Deletion:</strong> Your account and all associated personal data are permanently deleted from our active databases. There is no 30-day grace period or recovery option.</li>
+                    <li><strong>All Data is Removed:</strong> This includes:
+                        <ul>
+                            <li>Your profile (name, username, email, DOB, gender, country)</li>
+                            <li>Your authentication details</li>
+                            <li>Your profile picture and all swipe photos</li>
+                            <li>Your bio and Instagram username</li>
+                            <li>All match history, visitor history, and pending requests</li>
+                            <li>All chat conversations and messages</li>
+                            <li>Any remaining in-app currency (Gold, Diamonds)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Subscriptions:</strong> Deleting your app account **does not** automatically cancel active subscriptions (Pro, Pro Max) billed through the Google Play Store. You must manage and cancel these separately through your Google Play account settings.</li>
+                </ul>
+
+                <h2>How to Request Deletion (If You Can't Access the App)</h2>
+                 <p>If you have uninstalled the app and can no longer access the in-app deletion button, you can still request deletion by contacting our support team.</p>
+                 <ol>
+                    <li>Send an email to <a href="mailto:support@netd4te.com">support@netd4te.com</a>.</li>
+                    <li>Use the subject line: <code>Account Deletion Request</code></li>
+                    <li>To verify your identity, you **must** send the email from the email address associated with your NETD4TE account and include your **unique username** in the body of the email.</li>
+                 </ol>
+                 <p>Once we verify your ownership, we will process the permanent deletion of your account and notify you via email.</p>
+                
+                 <h2>Data Retention Policy</h2>
+                <p>While your active personal data is deleted immediately, we may retain certain non-personal, anonymized, or aggregated data for analytical purposes to improve our services. Additionally, records related to financial transactions (like subscription purchases made via Google Play) may be retained for the period required by law for financial auditing and compliance. For full details, please read our <a href="privacypolicy.html">Privacy Policy</a>.</p>
             </div>
         </section>
     </main>
@@ -164,15 +236,14 @@
             <div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700 flex flex-col sm:flex-row justify-between items-center text-center">
                 <p class="text-sm text-gray-600 dark:text-dark-subtext">&copy; 2025 NETD4TE. All Rights Reserved.</p>
                 <div class="mt-4 sm:mt-0 space-x-4">
-                     <a href="privacypolicy.html" class="text-sm text-gray-600 dark:text-dark-subtext hover:text-primary dark:hover:text-primary-light">Privacy Policy</a>
-                     <a href="termsandcondition.html" class="text-sm text-gray-600 dark:text-dark-subtext hover:text-primary dark:hover:text-primary-light">Terms & Conditions</a>
-                     <!-- Add other relevant footer links if needed -->
+                    <a href="privacypolicy.html" class="text-sm text-gray-600 dark:text-dark-subtext hover:text-primary dark:hover:text-primary-light">Privacy Policy</a>
+                    <a href="termsandcondition.html" class="text-sm text-gray-600 dark:text-dark-subtext hover:text-primary dark:hover:text-primary-light">Terms & Conditions</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Download Modal (Copied from index.html for consistency, though less relevant here) -->
+    <!-- Download Modal (Copied from index.html for consistency) -->
     <div id="download-modal" class="fixed inset-0 bg-black bg-opacity-50 z-[60] hidden items-center justify-center p-4">
          <div class="bg-white dark:bg-dark-card rounded-lg shadow-xl p-8 max-w-sm w-full relative transform transition-all opacity-0 scale-95" id="modal-content">
              <button id="close-modal-button" class="absolute top-3 right-3 text-2xl text-gray-500 dark:text-dark-subtext hover:text-gray-800 dark:hover:text-dark-text">&times;</button>
@@ -196,7 +267,96 @@
          </div>
      </div>
 
-    <!-- Script (Reference to script.js for dark mode etc.) -->
-    <script src="script.js" defer></script>
+    <!-- Embedded JavaScript for site functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const htmlElement = document.documentElement;
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const closeMenuButton = document.getElementById('close-menu-button');
+            
+            const darkModeToggleDesktop = document.getElementById('darkModeToggleDesktop');
+            const themeIconDesktop = document.getElementById('theme-icon-desktop');
+            
+            const darkModeToggleMobile = document.getElementById('darkModeToggleMobile');
+            const themeToggleDotMobile = document.getElementById('theme-toggle-dot-mobile');
+
+            const downloadButton = document.getElementById('download-button');
+            const downloadModal = document.getElementById('download-modal');
+            const closeModalButton = document.getElementById('close-modal-button');
+            const modalContent = document.getElementById('modal-content');
+
+            const sunIcon = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />`;
+            const moonIcon = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />`;
+
+            // Function to set theme
+            const setTheme = (isDark) => {
+                if (isDark) {
+                    htmlElement.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                    if (themeIconDesktop) themeIconDesktop.innerHTML = sunIcon;
+                    if (themeToggleDotMobile) themeToggleDotMobile.style.transform = 'translateX(20px)';
+                } else {
+                    htmlElement.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                    if (themeIconDesktop) themeIconDesktop.innerHTML = moonIcon;
+                    if (themeToggleDotMobile) themeToggleDotMobile.style.transform = 'translateX(0)';
+                }
+            };
+
+            // Initialize theme
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const storedTheme = localStorage.getItem('theme');
+            setTheme(storedTheme ? storedTheme === 'dark' : prefersDark);
+
+            // Dark Mode Toggles
+            if (darkModeToggleDesktop) {
+                darkModeToggleDesktop.addEventListener('click', () => setTheme(!htmlElement.classList.contains('dark')));
+            }
+            if (darkModeToggleMobile) {
+                darkModeToggleMobile.addEventListener('click', () => setTheme(!htmlElement.classList.contains('dark')));
+            }
+
+            // Mobile Menu
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.remove('translate-x-full');
+                });
+            }
+            if (closeMenuButton) {
+                closeMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.add('translate-x-full');
+                });
+            }
+
+            // Download Modal
+            const openModal = () => {
+                downloadModal.classList.remove('hidden');
+                downloadModal.classList.add('flex');
+                setTimeout(() => {
+                    modalContent.classList.remove('opacity-0', 'scale-95');
+                    modalContent.classList.add('opacity-100', 'scale-100');
+                }, 10);
+            };
+
+            const closeModal = () => {
+                modalContent.classList.add('opacity-0', 'scale-95');
+                setTimeout(() => {
+                    downloadModal.classList.add('hidden');
+                    downloadModal.classList.remove('flex');
+                }, 200);
+            };
+
+            if (downloadButton) downloadButton.addEventListener('click', openModal);
+            if (closeModalButton) closeModalButton.addEventListener('click', closeModal);
+            if (downloadModal) {
+                downloadModal.addEventListener('click', (e) => {
+                    if (e.target === downloadModal) {
+                        closeModal();
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
