@@ -9,17 +9,92 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .prose {
+            max-width: 65ch;
+        }
+        .prose h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #FF69B4;
+        }
+        .dark .prose h1 {
+            color: #FFB6C1;
+        }
+        .prose h2 {
+            font-size: 1.875rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1.25rem;
+            color: #C71585;
+        }
+        .dark .prose h2 {
+            color: #FF69B4;
+        }
+        .prose h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #C71585;
+        }
+        .dark .prose h3 {
+            color: #FF69B4;
+        }
+        .prose p {
+            margin-bottom: 1.5rem;
+            line-height: 1.875;
+        }
+        .prose ul, .prose ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        .prose li {
+            margin-bottom: 0.75rem;
+            line-height: 1.75;
+        }
+        .prose strong {
+            font-weight: 600;
+            color: #C71585;
+        }
+        .dark .prose strong {
+            color: #FF69B4;
+        }
+        .prose a {
+            color: #FF69B4;
+            text-decoration: underline;
+        }
+        .prose a:hover {
+            color: #C71585;
+        }
+        .dark .prose a:hover {
+            color: #FFB6C1;
+        }
+        .highlight-box {
+            background-color: #FFF0F5;
+            border-left: 4px solid #FF69B4;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .dark .highlight-box {
+            background-color: #2a1a1a;
+            border-left-color: #FFB6C1;
+        }
+    </style>
     <script>
-        // Dark Mode Configuration
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        'primary': '#FF69B4', // Hot Pink
-                        'primary-dark': '#C71585', // Medium Violet Red
-                        'primary-light': '#FFB6C1', // Light Pink
+                        'primary': '#FF69B4',
+                        'primary-dark': '#C71585',
+                        'primary-light': '#FFB6C1',
                         'dark-bg': '#000000',
                         'dark-card': '#1a1a1a',
                         'dark-text': '#e0e0e0',
@@ -32,102 +107,453 @@
 </head>
 <body class="bg-white dark:bg-dark-bg text-gray-800 dark:text-dark-text transition-colors duration-300">
 
-    <!-- Minimal Header for Legal Pages -->
+    <!-- Header -->
     <header class="bg-white/80 dark:bg-dark-bg/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="text-3xl font-bold text-primary dark:text-primary-light">NETD4TE</a>
             <div class="flex items-center">
-                 <button id="darkModeToggleDesktop" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-dark-card">
-                    <svg id="theme-icon-desktop" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"></svg>
+                <button id="darkModeToggleDesktop" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-dark-card transition-colors">
+                    <svg id="theme-icon-desktop" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
                 </button>
-                 <a href="index.html" class="ml-4 text-sm font-semibold text-gray-600 dark:text-dark-subtext hover:text-primary dark:hover:text-primary-light">Back to Home</a>
+                <a href="index.html" class="ml-4 text-sm font-semibold text-gray-600 dark:text-dark-subtext hover:text-primary dark:hover:text-primary-light transition-colors">Back to Home</a>
             </div>
         </nav>
     </header>
     
-    <main class="container mx-auto px-6 py-16">
+    <main class="container mx-auto px-6 py-12 md:py-16">
         <div class="prose dark:prose-invert max-w-4xl mx-auto">
             
             <h1>Privacy Policy for NETD4TE</h1>
             
-            <p><strong>Last Updated:</strong> [Date of Last Update]</p>
+            <p><strong>Effective Date:</strong> October 28, 2025</p>
+            <p><strong>Last Updated:</strong> October 28, 2025</p>
 
-            <p>Welcome to NETD4TE! Your privacy is a top priority for us. This Privacy Policy is designed to help you understand what information we collect, why we collect it, how we use it, and the choices you have regarding your personal data when you use our application (the "Service").</p>
+            <div class="highlight-box">
+                <p class="mb-0"><strong>NETD4TE</strong> is developed and operated by <strong>AYUSH </strong> (operating as <strong>BLOODRAVEN</strong>), an individual developer based in <strong>Ujjain, Madhya Pradesh, India</strong>. Your privacy is our top priority, and we are committed to being transparent about how we collect, use, and protect your personal information.</p>
+            </div>
+
+            <p>This Privacy Policy explains what information we collect when you use the NETD4TE mobile application (the "App" or "Service"), how we use that information, and the choices you have regarding your data. By using NETD4TE, you agree to the collection and use of information in accordance with this policy.</p>
 
             <h2>1. Our Privacy-First Philosophy</h2>
-            <p>Before we get into the details, we want to highlight our core commitments to your privacy:</p>
-            <ul>
-                <li><strong>We Do Not Track Your Precise Location.</strong> Unlike many other apps, we do not request or track your device's GPS data. Our "Nearby" feature works with keywords, not coordinates, to give you full control.</li>
-                <li><strong>We Do Not Access Your Camera.</strong> We will never ask for permission to access your device's camera.</li>
-                <li><strong>We Have Minimal Access to Your Photos.</strong> We only ask for permission to access the specific photos you choose to upload to your profile. We cannot see or access any other photos on your device.</li>
-            </ul>
-
-            <h2>2. Information We Collect</h2>
-            <p>To provide and improve our Service, we collect the following types of information:</p>
             
-            <h4>A. Information You Provide to Us Directly</h4>
-            <p>When you create an account, you provide us with certain information that is necessary for the Service to work. This includes:</p>
+            <p>Before diving into the details, we want to emphasize our core commitments to protecting your privacy:</p>
+
+            <div class="highlight-box">
+                <ul class="mb-0">
+                    <li><strong>We Do Not Track Your Precise Location.</strong> We never request or use your device's GPS coordinates. Our app only asks for your country, and our "Nearby Explore" feature uses location keywords that you control—not real-time tracking.</li>
+                    <li><strong>We Do Not Access Your Camera.</strong> We will never ask for permission to access your device's camera.</li>
+                    <li><strong>We Have Minimal Access to Your Photos.</strong> We only access the specific photos you choose to upload. The Android system restricts us to only those selected images—we cannot see or access any other photos on your device.</li>
+                    <li><strong>We Do Not Sell Your Data.</strong> We will never sell your personal information to third parties.</li>
+                    <li><strong>No Email Marketing.</strong> We only send emails for security and account verification purposes—never for promotional or marketing campaigns.</li>
+                </ul>
+            </div>
+
+            <h2>2. Developer Information</h2>
+            
+            <p>NETD4TE is developed by:</p>
             <ul>
-                <li><strong>Account Credentials:</strong> Your email address and a password to secure your account.</li>
-                <li><strong>Profile Information:</strong> Your public-facing profile name, username, bio, date of birth, gender, and country.</li>
-                <li><strong>Photos:</strong> The profile picture and three swipe images you choose to upload.</li>
-                <li><strong>Optional Information:</strong> Your Instagram username, should you choose to provide it.</li>
+                <li><strong>Developer Name:</strong> AYUSH </li>
+                <li><strong>Business Name:</strong> BLOODRAVEN (Solo Individual Developer)</li>
+                <li><strong>Location:</strong> Ujjain, Madhya Pradesh, India</li>
+                <li><strong>Trademark:</strong> NETD4TE™</li>
             </ul>
 
-            <h4>B. Permissions We Request</h4>
-            <p>To enable certain features, we request your permission to access the following:</p>
+            <p><strong>Contact Information:</strong></p>
             <ul>
-                <li><strong>Photo Library Access:</strong> To allow you to select and upload photos for your profile.</li>
-                <li><strong>Notifications:</strong> To send you alerts about new messages, matches, and other app-related activities. You can manage this in your device settings.</li>
+                <li>Email (Privacy Inquiries): <a href="mailto:privacy@netd4te.com">privacy@netd4te.com</a></li>
+                <li>Email (Support): <a href="mailto:support@netd4te.com">support@netd4te.com</a></li>
+                <li>Email (General): <a href="mailto:contact@netd4te.com">contact@netd4te.com</a></li>
+                <li>Email (Team): <a href="mailto:team@netd4te.com">team@netd4te.com</a></li>
             </ul>
 
-            <h2>3. How We Use Your Information</h2>
+            <h2>3. Information We Collect</h2>
+            
+            <p>To provide you with the best dating experience, we collect several types of information. Here's exactly what we collect and why:</p>
+
+            <h3>A. Information You Provide During Account Creation</h3>
+            
+            <p>When you register for NETD4TE, you provide the following information:</p>
+
+            <ul>
+                <li><strong>Profile Picture:</strong> One main profile photo selected from your device's gallery.</li>
+                <li><strong>Three Swipe Photos:</strong> Three additional photos for the swipe interface, also selected from your gallery.</li>
+                <li><strong>Profile Name:</strong> A display name visible to other users (can be any name—real, nickname, or made-up).</li>
+                <li><strong>Username:</strong> A unique identifier for your account (can be any username you choose).</li>
+                <li><strong>Email Address:</strong> Used for account verification, security alerts, password resets, and two-factor authentication. We verify your email with a one-time password (OTP) before account creation.</li>
+                <li><strong>Bio:</strong> An optional description about yourself (maximum 500 characters).</li>
+                <li><strong>Country:</strong> Your country of residence (used to show you other users from the same country). You can update this anytime.</li>
+                <li><strong>Instagram Username:</strong> Optional plain text field (not linked to Meta/Instagram APIs—just displayed as text if you want matches to find you on Instagram).</li>
+                <li><strong>Date of Birth:</strong> Required to verify you are 18 years or older. We calculate and display your age to other users.</li>
+                <li><strong>Gender:</strong> Male, Female, or Other (used to show you profiles of the opposite gender based on your selection).</li>
+                <li><strong>Password:</strong> Encrypted and stored securely using bcrypt hashing (minimum 6 characters).</li>
+            </ul>
+
+            <h3>B. Information Collected Through Your Use of the App</h3>
+
+            <p>As you use NETD4TE, we automatically collect certain information:</p>
+
+            <ul>
+                <li><strong>Swipe History:</strong> Records of profiles you've swiped left on (to avoid showing them again until you've seen all available users).</li>
+                <li><strong>Match Data:</strong> Information about users you've matched with.</li>
+                <li><strong>Request Data:</strong> Connection requests you've sent or received (normal and "introvert" requests).</li>
+                <li><strong>Chat Messages:</strong> All messages you send and receive are encrypted using AES-256-CBC encryption and stored securely. We automatically limit chat history to the most recent <strong>114 messages per conversation</strong> to save database storage. When the 115th message is sent, the oldest message is permanently deleted.</li>
+                <li><strong>Profile Visits:</strong> If you are not a verified user, the app tracks when other non-verified users view your profile. This information is hidden until you unlock it using in-app currency (diamonds). Verified users' visits are not tracked, and their unlocks are free.</li>
+                <li><strong>Blocked and Muted Users:</strong> Lists of users you've blocked or muted.</li>
+                <li><strong>Virtual Currency Balance:</strong> Your gold and diamond balances, daily reward streaks, and last claim timestamps.</li>
+                <li><strong>Notification Settings:</strong> Your preferences for receiving push notifications for messages, requests, matches, profile visits, etc.</li>
+                <li><strong>Online Status:</strong> Whether you are currently active in the app (visible to your matches).</li>
+                <li><strong>Last Active Timestamp:</strong> When you were last active in the app.</li>
+                <li><strong>Ghost Mode Status:</strong> Whether you've enabled Ghost Mode to hide your profile from the explore screen.</li>
+                <li><strong>Two-Factor Authentication (2FA) Status:</strong> Whether you've enabled 2FA for login.</li>
+                <li><strong>Location Keyword:</strong> An optional keyword you can set for the "Nearby Explore" feature (e.g., "Downtown," "University Area")—not GPS coordinates.</li>
+                <li><strong>Account Status:</strong> Whether your account has received any temporary or permanent bans, including reasons and admin notes.</li>
+                <li><strong>Emoji Reaction Frequency:</strong> Which emojis you use most often (to suggest frequently used reactions).</li>
+            </ul>
+
+            <h3>C. Device Permissions We Request</h3>
+
+            <p>To enable certain features, NETD4TE requests the following permissions from your Android device:</p>
+
+            <ul>
+                <li><strong>INTERNET:</strong> Required for all network communication with our servers.</li>
+                <li><strong>READ_MEDIA_IMAGES / READ_EXTERNAL_STORAGE:</strong> Allows you to select photos from your gallery. On Android 13+, we use READ_MEDIA_IMAGES, which only grants access to the specific images you choose—not your entire photo library.</li>
+                <li><strong>WRITE_EXTERNAL_STORAGE:</strong> Used for temporarily saving images during the upload process (required on older Android versions).</li>
+                <li><strong>POST_NOTIFICATIONS:</strong> Allows the app to send you push notifications (Android 13+ only). You can disable this in your device settings.</li>
+                <li><strong>VIBRATE:</strong> Enables your device to vibrate when you receive a notification.</li>
+                <li><strong>BILLING:</strong> Required for in-app purchases through Google Play Billing (subscriptions and virtual currency purchases).</li>
+            </ul>
+
+            <p><strong>Note:</strong> We never request camera permission. You can only upload photos that already exist on your device.</p>
+
+            <h3>D. Information Collected Automatically</h3>
+
+            <p>Like most mobile apps, we automatically collect certain technical information:</p>
+
+            <ul>
+                <li><strong>Device Information:</strong> Device model, operating system version, and app configuration (collected via Firebase Crashlytics).</li>
+                <li><strong>Log Data:</strong> When the app crashes or encounters an error, we collect error logs, device IP address (anonymized), device name, and the time/date of the error through Firebase Crashlytics.</li>
+                <li><strong>Analytics Data:</strong> We use Firebase Analytics and Google Analytics <strong>only for crash reporting</strong>—not for tracking user behavior or activity patterns.</li>
+            </ul>
+
+            <h2>4. How We Use Your Information</h2>
+
             <p>We use the information we collect for the following purposes:</p>
+
             <ul>
-                <li>To create and manage your account and provide you with our Service.</li>
-                <li>To display your profile to other users.</li>
-                <li>To enable communication between users who have matched.</li>
-                <li>To operate and improve our Service, including developing new features.</li>
-                <li>To protect the safety and security of our users by preventing and addressing fraudulent or illegal activities.</li>
-                <li>To provide you with customer support.</li>
-                <li>To show relevant third-party advertisements (e.g., from Google AdMob) that allow us to offer certain features for free.</li>
+                <li><strong>To Create and Manage Your Account:</strong> Your profile information is displayed to other users to facilitate matches and connections.</li>
+                <li><strong>To Enable Communication:</strong> Chat messages are encrypted and stored to allow you to communicate with your matches.</li>
+                <li><strong>To Personalize Your Experience:</strong> We use your country and gender preferences to show you relevant profiles.</li>
+                <li><strong>To Process In-App Purchases:</strong> We use Google Play Billing to handle payments for premium subscriptions (Pro and Pro Max plans) and virtual currency purchases. We do not store your payment information.</li>
+                <li><strong>To Send Important Emails:</strong> We use the Brevo email service to send you:<ul>
+                    <li>Registration verification OTPs</li>
+                    <li>Password reset codes and links</li>
+                    <li>Email change verification OTPs</li>
+                    <li>Two-factor authentication codes</li>
+                    <li>Account security alerts (e.g., temporary or permanent ban notifications)</li>
+                    <li><strong>We never send promotional or marketing emails.</strong></li>
+                </ul></li>
+                <li><strong>To Send Push Notifications:</strong> With your permission, we use OneSignal to send you notifications about new messages, match requests, profile visits, and other app activities. You can control which notifications you receive in the app's settings.</li>
+                <li><strong>To Display Ads:</strong> We use Google AdMob to show non-personalized advertisements. AdMob may collect certain device information for ad delivery, but we do not provide them with your personal profile data.</li>
+                <li><strong>To Reward Ad Viewing:</strong> When you watch a rewarded video ad, AdMob sends a server-side verification to our backend to confirm you watched the ad, and we then grant you the reward (gold or diamonds).</li>
+                <li><strong>To Improve the App:</strong> Crash reports from Firebase Crashlytics help us identify and fix bugs to improve the app's stability.</li>
+                <li><strong>To Enforce Our Policies:</strong> We monitor reports from users and take action (including temporary or permanent bans) against accounts that violate our Community Guidelines or Terms of Service.</li>
+                <li><strong>To Provide Customer Support:</strong> When you contact us with questions or issues, we use your information to respond and resolve your concerns.</li>
             </ul>
 
-            <h2>4. How We Share Your Information</h2>
-            <p>We do not sell your personal data. We may share your information in the following circumstances:</p>
+            <h2>5. Third-Party Services We Use</h2>
+
+            <p>NETD4TE integrates with several third-party services to provide functionality. These services may collect information as described in their respective privacy policies. We encourage you to review them:</p>
+
+            <h3>A. Google Play Services</h3>
+            <p>Used for core Android functionality and app distribution.</p>
+            <p><strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
+
+            <h3>B. Firebase Services (Google)</h3>
             <ul>
-                <li><strong>With Other Users:</strong> Your public profile information is visible to other users of the Service.</li>
-                <li><strong>With Ad Partners:</strong> We partner with ad providers, such as Google AdMob and potentially others in the future, who may collect information to serve personalized ads. We encourage you to review their respective privacy policies.</li>
-                <li><strong>For Legal Reasons:</strong> We may disclose your information if required by law or if we believe in good faith that such action is necessary to comply with legal processes, protect our rights, or ensure the safety of our users.</li>
+                <li><strong>Firebase Storage:</strong> Stores your profile pictures and swipe images securely in the cloud.</li>
+                <li><strong>Firebase Crashlytics:</strong> Collects crash reports and error logs to help us fix bugs.</li>
+                <li><strong>Firebase Analytics:</strong> Used only for crash and error tracking—not behavioral analytics.</li>
+            </ul>
+            <p><strong>Privacy Policy:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">https://firebase.google.com/support/privacy</a></p>
+
+            <h3>C. Google AdMob</h3>
+            <p>Displays advertisements in the app. AdMob shows <strong>non-personalized ads only</strong>—we do not enable personalized ad targeting. AdMob may collect device information for ad delivery and fraud prevention.</p>
+            <p><strong>Privacy Policy:</strong> <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">https://support.google.com/admob/answer/6128543</a></p>
+
+            <h3>D. OneSignal</h3>
+            <p>Sends push notifications for new messages, match requests, profile visits, and other in-app activities. OneSignal receives your device's push notification token and the content of notifications we send. You can control notification permissions in your device settings and customize which types of notifications you receive in the app.</p>
+            <p><strong>Privacy Policy:</strong> <a href="https://onesignal.com/privacy_policy" target="_blank" rel="noopener noreferrer">https://onesignal.com/privacy_policy</a></p>
+
+            <h3>E. Brevo (formerly Sendinblue)</h3>
+            <p>Sends transactional emails for account verification, password resets, and security alerts. Brevo receives your email address and the content of the emails we send.</p>
+            <p><strong>Privacy Policy:</strong> <a href="https://www.brevo.com/legal/privacypolicy/" target="_blank" rel="noopener noreferrer">https://www.brevo.com/legal/privacypolicy/</a></p>
+
+            <h3>F. Google Play Billing</h3>
+            <p>Processes payments for in-app purchases (premium subscriptions and virtual currency). Google Play handles all payment processing—we never see or store your credit card or payment information.</p>
+            <p><strong>Privacy Policy:</strong> <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice" target="_blank" rel="noopener noreferrer">https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice</a></p>
+
+            <h3>G. MongoDB Atlas</h3>
+            <p>Our database service where user account data, messages, and app data are stored. Data is encrypted during transmission (HTTPS/SSL) and at rest on MongoDB's servers.</p>
+            <p><strong>Privacy Policy:</strong> <a href="https://www.mongodb.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">https://www.mongodb.com/legal/privacy-policy</a></p>
+
+            <h2>6. How We Share Your Information</h2>
+
+            <p>We do not sell your personal information to anyone. However, we share your information in the following limited circumstances:</p>
+
+            <h3>A. With Other Users of NETD4TE</h3>
+            <p>Your profile information (profile picture, swipe photos, profile name, username, bio, country, Instagram username, age, and gender) is visible to other users when they browse profiles, search for users, or view your profile.</p>
+
+            <p>If you are matched with another user, they can also see your online status and last active timestamp.</p>
+
+            <p><strong>Important:</strong> Verified users can see additional profile details. Non-verified users have limited visibility to encourage account verification.</p>
+
+            <h3>B. With Service Providers</h3>
+            <p>We share your information with the third-party services listed in Section 5 to operate the app. These providers are obligated to protect your data and use it only for the purposes we specify.</p>
+
+            <h3>C. For Legal Reasons</h3>
+            <p>We may disclose your information if required by law, legal process, or government request, or if we believe in good faith that disclosure is necessary to:</p>
+            <ul>
+                <li>Comply with legal obligations</li>
+                <li>Protect the rights, property, or safety of NETD4TE, our users, or the public</li>
+                <li>Detect, prevent, or address fraud, security, or technical issues</li>
+                <li>Enforce our Terms of Service or Community Guidelines</li>
             </ul>
 
-            <h2>5. Your Choices and Rights</h2>
-            <p>You have full control over your personal information:</p>
+            <h3>D. Business Transfers</h3>
+            <p>If NETD4TE is involved in a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction. We will notify you via email and/or a prominent notice in the app before your information is transferred and becomes subject to a different privacy policy.</p>
+
+            <h2>7. Data Security</h2>
+
+            <p>We take the security of your personal information seriously and implement industry-standard measures to protect it:</p>
+
             <ul>
-                <li><strong>Access and Update:</strong> You can review and edit your profile information at any time within the app's settings.</li>
-                <li><strong>Account Deletion:</strong> You can permanently delete your account at any time using the "Delete Account" feature in the app. When you delete your account, all of your data is immediately and permanently removed from our servers. There is no recovery period.</li>
+                <li><strong>Encryption in Transit:</strong> All data transmitted between your device and our servers is encrypted using HTTPS/SSL.</li>
+                <li><strong>Encryption at Rest:</strong> User data stored on our MongoDB servers is encrypted at rest.</li>
+                <li><strong>Password Security:</strong> Passwords are hashed using bcrypt before being stored in the database. We never store passwords in plain text.</li>
+                <li><strong>Message Encryption:</strong> All chat messages are encrypted using AES-256-CBC encryption before being saved to the database. Only the sender and receiver can read the decrypted messages.</li>
+                <li><strong>Secure Image Storage:</strong> Profile pictures and swipe images are stored in Firebase Storage with access controls to prevent unauthorized access.</li>
             </ul>
 
-            <h2>6. Our Future Plans</h2>
-            <p>We are constantly working to enhance NETD4TE. In the future, we plan to introduce premium memberships and the ability to purchase virtual currency with real money. If and when these features are introduced, this Privacy Policy will be updated to reflect any new data processing practices.</p>
+            <p><strong>However, please note:</strong> No method of transmission over the internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security.</p>
 
-            <h2>7. Contact Us</h2>
-            <p>If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>
-            <p><strong>privacy@netd4te.com</strong></p>
+            <h2>8. Data Retention and Deletion</h2>
+
+            <h3>A. How Long We Keep Your Data</h3>
+
+            <ul>
+                <li><strong>Account Data:</strong> We retain your account information for as long as your account is active.</li>
+                <li><strong>Chat Messages:</strong> We automatically limit chat history to the most recent <strong>114 messages per conversation</strong>. When the 115th message is sent, the oldest message is permanently deleted. This helps us save database storage while maintaining recent conversation history.</li>
+                <li><strong>Deleted Accounts:</strong> When you delete your account, all of your data is <strong>immediately and permanently removed</strong> from our servers with no recovery period. This includes:<ul>
+                    <li>Your profile information</li>
+                    <li>All photos (deleted from Firebase Storage)</li>
+                    <li>All chat messages</li>
+                    <li>All match and request data</li>
+                    <li>All reports you've submitted</li>
+                    <li>All other associated data</li>
+                </ul></li>
+            </ul>
+
+            <p><strong>Important:</strong> Account deletion is irreversible. Once deleted, your account cannot be recovered. Matched users will not see a "This user deleted their account" message—you will simply disappear from their matches with no trace.</p>
+
+            <h3>B. What You Can and Cannot Delete</h3>
+
+            <ul>
+                <li><strong>You CAN delete:</strong> Profile pictures, swipe images, bio, Instagram username, and other optional profile fields from the Edit Profile screen.</li>
+                <li><strong>You CANNOT delete individually:</strong> Username, email address, or password. If you want to remove these, you must delete your entire account.</li>
+                <li><strong>You CANNOT change:</strong> Your date of birth/age after account creation.</li>
+            </ul>
+
+            <h3>C. No Data Export Feature</h3>
+            <p>NETD4TE does not currently offer a feature to download or export your data. If you need a copy of your information for any reason, please contact us at <a href="mailto:privacy@netd4te.com">privacy@netd4te.com</a>, and we will assist you.</p>
+
+            <h2>9. Your Rights and Choices</h2>
+
+            <p>You have control over your personal information:</p>
+
+            <h3>A. Access and Update Your Information</h3>
+            <p>You can view and edit most of your profile information at any time by going to the "Edit Profile" screen in the app. This includes your profile picture, swipe images, profile name, username, bio, country, and Instagram username.</p>
+
+            <h3>B. Manage Notification Preferences</h3>
+            <p>You can control which types of push notifications you receive by going to Settings → Notification Settings in the app. You can disable notifications entirely in your device's system settings.</p>
+
+            <h3>C. Delete Your Account</h3>
+            <p>You can permanently delete your account at any time by going to Settings → Account Settings → Delete Account. Deletion is immediate and permanent, with no recovery period.</p>
+
+            <h3>D. Opt Out of Ads</h3>
+            <p>We show non-personalized ads via Google AdMob. If you subscribe to a premium plan (Pro or Pro Max), ads are removed from the app. You can also limit ad tracking on your device through your device's privacy settings.</p>
+
+            <h3>E. Rights Under GDPR (European Users)</h3>
+            <p>If you are located in the European Economic Area (EEA), you have additional rights under the General Data Protection Regulation (GDPR):</p>
+            <ul>
+                <li><strong>Right to Access:</strong> Request a copy of the personal data we hold about you.</li>
+                <li><strong>Right to Rectification:</strong> Request correction of inaccurate or incomplete data.</li>
+                <li><strong>Right to Erasure:</strong> Request deletion of your personal data (subject to legal obligations).</li>
+                <li><strong>Right to Restrict Processing:</strong> Request that we limit how we use your data.</li>
+                <li><strong>Right to Data Portability:</strong> Request a copy of your data in a structured, commonly used format.</li>
+                <li><strong>Right to Object:</strong> Object to our processing of your data for certain purposes.</li>
+                <li><strong>Right to Withdraw Consent:</strong> Withdraw your consent at any time where we rely on consent to process your data.</li>
+            </ul>
+            <p>To exercise these rights, contact us at <a href="mailto:privacy@netd4te.com">privacy@netd4te.com</a>.</p>
+
+            <h3>F. Rights Under CCPA (California Users)</h3>
+            <p>If you are a California resident, you have rights under the California Consumer Privacy Act (CCPA):</p>
+            <ul>
+                <li><strong>Right to Know:</strong> Request information about the categories and specific pieces of personal information we collect.</li>
+                <li><strong>Right to Delete:</strong> Request deletion of your personal information.</li>
+                <li><strong>Right to Opt-Out:</strong> Opt out of the sale of your personal information (Note: We do not sell personal information).</li>
+                <li><strong>Right to Non-Discrimination:</strong> You will not be discriminated against for exercising your CCPA rights.</li>
+            </ul>
+            <p>To exercise these rights, contact us at <a href="mailto:privacy@netd4te.com">privacy@netd4te.com</a>.</p>
+
+            <h2>10. Children's Privacy</h2>
+
+            <p>NETD4TE is intended for users who are <strong>18 years of age or older</strong>. We do not knowingly collect personal information from anyone under the age of 18.</p>
+
+            <p>During account registration, we verify that users are at least 18 years old by requiring a date of birth. If the calculated age is under 18, account creation is automatically blocked.</p>
+
+            <p>If we discover that we have inadvertently collected personal information from a child under 18, we will immediately delete that information from our servers. If you believe we have collected information from a minor, please contact us immediately at <a href="mailto:privacy@netd4te.com">privacy@netd4te.com</a>.</p>
+
+            <h2>11. International Data Transfers</h2>
+
+            <p>NETD4TE is operated from India, and your information may be stored and processed in India or in any other country where we or our service providers maintain facilities.</p>
+
+            <p>By using NETD4TE, you consent to the transfer of your information to countries outside your country of residence, which may have different data protection laws than your country.</p>
+
+            <p>We take steps to ensure that your data receives an adequate level of protection wherever it is processed, in accordance with applicable data protection laws.</p>
+
+            <h2>12. Cookies and Tracking Technologies</h2>
+
+            <p>NETD4TE does not use cookies or similar tracking technologies directly. However, third-party services integrated into the app (such as Firebase Analytics, Google AdMob, and OneSignal) may use cookies or similar technologies to collect information.</p>
+
+            <p>You can control cookies and tracking through your device's privacy settings. Please refer to your device manufacturer's instructions for more information.</p>
+
+            <h2>13. Changes to This Privacy Policy</h2>
+
+            <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we make changes, we will:</p>
+
+            <ul>
+                <li>Update the "Last Updated" date at the top of this policy</li>
+                <li>Post the new Privacy Policy on this page</li>
+                <li>Notify you via email and/or a prominent notice in the app if the changes are significant</li>
+            </ul>
+
+            <p>We encourage you to review this Privacy Policy periodically to stay informed about how we protect your information. Your continued use of NETD4TE after any changes to this Privacy Policy constitutes your acceptance of the updated policy.</p>
+
+            <h2>14. Future Features</h2>
+
+            <p>We are constantly working to improve NETD4TE and plan to introduce additional features in the future, including:</p>
+
+            <ul>
+                <li>Premium membership tiers (Pro and Pro Max) with enhanced features and ad removal</li>
+                <li>The ability to purchase virtual currency (gold and diamonds) with real money</li>
+                <li>Additional social features and customization options</li>
+            </ul>
+
+            <p>If and when these features are introduced, we will update this Privacy Policy to reflect any new data processing practices. We will notify you of significant changes as described in Section 13.</p>
+
+            <h2>15. Contact Us</h2>
+
+            <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please don't hesitate to contact us:</p>
+
+            <div class="highlight-box">
+                <p><strong>Privacy Inquiries:</strong><br>
+                Email: <a href="mailto:privacy@netd4te.com">privacy@netd4te.com</a></p>
+
+                <p><strong>General Support:</strong><br>
+                Email: <a href="mailto:support@netd4te.com">support@netd4te.com</a></p>
+
+                <p><strong>General Contact:</strong><br>
+                Email: <a href="mailto:contact@netd4te.com">contact@netd4te.com</a><br>
+                Email (Team): <a href="mailto:team@netd4te.com">team@netd4te.com</a>
+                </p>
+
+                <p><strong>Mailing Address:</strong><br>
+                AYUSH (BLOODRAVEN)<br>
+                Ujjain, Madhya Pradesh, India</p>
+            </div>
+
+            <p>We will respond to your inquiry as soon as possible, typically within 7-14 business days.</p>
+
+            <h2>16. Acknowledgment and Consent</h2>
+
+            <p>By creating an account and using NETD4TE, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy. If you do not agree with any part of this policy, please do not use the app.</p>
+
+            <div class="highlight-box">
+                <p class="mb-0"><strong>Thank you for trusting NETD4TE with your personal information. We are committed to protecting your privacy and providing you with a safe, enjoyable dating experience.</strong></p>
+            </div>
+
+            <p style="margin-top: 3rem; text-align: center; color: #a0a0a0; font-size: 0.875rem;">
+                © 2025 NETD4TE. All Rights Reserved. | Developed by AYUSH (BLOODRAVEN)
+            </p>
 
         </div>
     </main>
     
-    <!-- Minimal Footer -->
-     <footer class="bg-gray-100 dark:bg-dark-card mt-20">
-        <div class="container mx-auto px-6 py-4 text-center text-gray-600 dark:text-dark-subtext">
-            &copy; 2025 NETD4TE. All Rights Reserved.
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-dark-card mt-20">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <p class="text-gray-600 dark:text-dark-subtext">&copy; 2025 NETD4TE. All Rights Reserved.</p>
+                    <p class="text-sm text-gray-500 dark:text-dark-subtext mt-1">Developed by AYUSH (BLOODRAVEN)</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="privacy-policy.html" class="text-gray-600 dark:text-dark-subtext hover:text-primary dark:hover:text-primary-light transition-colors">Privacy Policy</a>
+                    <a href="terms-of-service.html" class="text-gray-600 dark:text-dark-subtext hover:text-primary dark:hover:text-primary-light transition-colors">Terms of Service</a>
+                    <a href="mailto:contact@netd4te.com" class="text-gray-600 dark:text-dark-subtext hover:text-primary dark:hover:text-primary-light transition-colors">Contact</a>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- No Download Modal on this page -->
+    <!-- Dark Mode Toggle Script -->
+    <script>
+        // Dark mode functionality
+        const darkModeToggle = document.getElementById('darkModeToggleDesktop');
+        const themeIcon = document.getElementById('theme-icon-desktop');
+        const html = document.documentElement;
 
-    <script src="script.js" defer></script>
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            html.classList.add('dark');
+            updateIcon(true);
+        } else {
+            updateIcon(false);
+        }
+
+        // Toggle dark mode
+        darkModeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            const isDark = html.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon(isDark);
+        });
+
+        // Update icon based on theme
+        function updateIcon(isDark) {
+            if (isDark) {
+                themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>';
+            } else {
+                themeIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>';
+            }
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-
